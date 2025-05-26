@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freev2raynodes.github.io/news/article-118258.htm" />
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>破解V2Ray“基础连接已关闭”难题：实战排查与配置优化全指南</title>
+        <meta name="description" content="在科学上网的日常使用中，V2Ray一直是许多技术用户的首选工具。它以灵活的架构、强大的协议支持和良好的隐私性闻名。但即便如此强大，V2Ray在实战中也时常会“掉链子”，其中一个让人最头痛的报错就是：“" />
+        <link rel="icon" href="/assets/website/img/windowsnekoray/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free V2ray Nodes订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freev2raynodes.github.io/news/article-118258.htm" />
+    <meta property="og:site_name" content="Free V2ray Nodes订阅中文网" />
+    <meta property="og:title" content="破解V2Ray“基础连接已关闭”难题：实战排查与配置优化全指南" />
+    <meta property="og:image" content="https://freev2raynodes.github.io/uploads/20240707/367ef6f168cf678642226d7c3f77cba0.webp" />
+        <meta property="og:release_date" content="2025-05-25T08:59:02" />
+    <meta property="og:updated_time" content="2025-05-25T08:59:02" />
+        <meta property="og:description" content="在科学上网的日常使用中，V2Ray一直是许多技术用户的首选工具。它以灵活的架构、强大的协议支持和良好的隐私性闻名。但即便如此强大，V2Ray在实战中也时常会“掉链子”，其中一个让人最头痛的报错就是：“" />
+        
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="破解V2Ray“基础连接已关闭”难题：实战排查与配置优化全指南">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="/assets/website/css/windowsnekoray/bootstrap.min.css">
+    <!-- FONT-AWESOME -->
+    <link rel="stylesheet" href="/assets/website/css/windowsnekoray/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- OWL CAROUSEL -->
+    <link href="/assets/website/css/windowsnekoray/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/website/css/windowsnekoray/owl.theme.default.min.css" rel="stylesheet">
+    <!-- LIGHTBOX -->
+    <link rel=" stylesheet" href="/assets/website/css/windowsnekoray/lightbox.css">
+    <!--Style CSS file-->
+    <link rel=" stylesheet" href="/assets/website/css/windowsnekoray/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DT9HFPFX9X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DT9HFPFX9X');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- ====== Preloader ======  -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <!-- ======End Preloader ======  -->
+    <!-- ======START NAVGITION ======  -->
+    <nav class="navbar navbar-expand-lg">
+        <!-- logo -->
+        <a class="navbar-brand" href="/">
+                <span>Free V2ray Nodes</span>
+                </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText">
+            <span class="icon-bar"><i class="fa fa-bars fa-2x"></i></span>
+        </button>
+        <!--End of Resposive Toggle icon-->
+        <div class="collapse navbar-collapse" id="navbarText">
+            <!--Main menu navigation list-->
+            <ul class="navbar-nav ml-auto line">
+                                <li class="nav-item">
+                    <a class="nav-link" href="/">首页</a>
+                </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="/paid-subscribe/">推荐机场</a>
+                </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="/news/">新闻资讯</a>
+                </li>
+                                <li class="nav-item">
+                    <a class="nav-link" href="/client.htm">客户端</a>
+                </li>
+                            </ul>
+            <!--End of Main menu navigation list-->
+        </div>
+        <!--End of resposive collapse class-->
+    </nav>
+    <!-- ====== END NAVGITION ======  -->
+    <!-- =======START HEADER=========== -->
+    <header class="home list" id="home" data-scroll-index="0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 home-content mt-md-5 mt-sm-5">
+                    <h2 class="heading-tertiary mt-3 mb-3">
+                        破解V2Ray“基础连接已关闭”难题：实战排查与配置优化全指南                    </h2>
+                    <p class="mb-5">
+                        <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ====== END HEADER ======  -->
+    <!-- Scroll to Top -->
+    <div id="scroll-to-top"><i class="fa fa-arrow-up fa-fw"></i></div>
+    <!-- ====== START ABOUT ======  -->
+    <section class="about padding" id="about" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    
+<p data-start="35" data-end="182">在科学上网的日常使用中，V2Ray一直是许多技术用户的首选工具。它以灵活的架构、强大的协议支持和良好的隐私性闻名。但即便如此强大，V2Ray在实战中也时常会“掉链子”，其中一个让人最头痛的报错就是：“基础连接已经关闭：发送时发生错误”。这类问题不但难以定位，且常常出现在关键时刻，令人无比抓狂。</p>
+<p data-start="184" data-end="280">本文将深入解析这个常见错误的成因，结合作者多次实战排查经验，分享一套系统的解决方案，并在最后附上配置优化技巧和防范建议。无论你是V2Ray新手还是老用户，相信都能在本文中找到实用而具体的指导。</p>
+<hr data-start="282" data-end="285">
+<h2 data-start="287" data-end="311">一、V2Ray的核心概览：它为何如此重要？</h2>
+<p data-start="313" data-end="403">V2Ray 是一个功能强大的代理中转平台，其核心是自定义协议 VMess。通过V2Ray，用户可以绕过地域性封锁、隐藏自身真实IP、加密数据流量，是目前科学上网领域中的“多面手”。</p>
+<p data-start="405" data-end="502">它支持多种传输协议（TCP、mKCP、WebSocket、gRPC）、加密方式（AEAD、ChaCha20等），还能实现高度自定义的路由策略，非常适合那些有安全需求或需要精细网络流量控制的用户。</p>
+<p data-start="504" data-end="557">但也正是由于其配置选项极其丰富，一点点参数的错误就可能导致连接失败，出现各种“基础连接关闭”类的错误提示。</p>
+<hr data-start="559" data-end="562">
+<h2 data-start="564" data-end="592">二、错误全解析：“基础连接已经关闭发送时发生错误”</h2>
+<p data-start="594" data-end="620">当你使用V2Ray连接节点时，如果系统提示如下内容：</p>
+<blockquote data-start="622" data-end="713">
+<p data-start="624" data-end="713">“基础连接已经关闭：发送时发生错误（The underlying connection was closed: An error occurred while sending）”</p>
+</blockquote>
+<p data-start="715" data-end="772">这说明客户端在<strong data-start="722" data-end="732">发送请求阶段</strong>就遇到了严重问题，V2Ray未能成功与远程服务器建立或维持连接。这种情况意味着：</p>
+<ul data-start="774" data-end="825">
+<li data-start="774" data-end="789">
+<p data-start="776" data-end="789">数据包还未被处理就被中断；</p>
+</li>
+<li data-start="790" data-end="803">
+<p data-start="792" data-end="803">服务端可能压根没响应；</p>
+</li>
+<li data-start="804" data-end="825">
+<p data-start="806" data-end="825">或者本地连接中遭到了不明的干扰或阻断。</p>
+</li>
+</ul>
+<p data-start="827" data-end="851">接下来，我们从实际环境出发，逐一分析常见的成因。</p>
+<hr data-start="853" data-end="856">
+<h2 data-start="858" data-end="874">三、导致错误的5大主要原因</h2>
+<h3 data-start="876" data-end="893">1. <strong data-start="883" data-end="893">服务器端异常</strong></h3>
+<p data-start="895" data-end="927">服务器本身是连接的起点，一旦出现以下情况，都会直接导致连接失败：</p>
+<ul data-start="929" data-end="1006">
+<li data-start="929" data-end="950">
+<p data-start="931" data-end="950">服务未启动（或配置错误导致启动失败）；</p>
+</li>
+<li data-start="951" data-end="966">
+<p data-start="953" data-end="966">防火墙策略限制了端口访问；</p>
+</li>
+<li data-start="967" data-end="988">
+<p data-start="969" data-end="988">服务端资源耗尽，如线程池满、内存溢出；</p>
+</li>
+<li data-start="989" data-end="1006">
+<p data-start="991" data-end="1006">V2Ray核心程序崩溃或卡死。</p>
+</li>
+</ul>
+<h3 data-start="1008" data-end="1032">2. <strong data-start="1015" data-end="1032">网络不稳定或DNS解析失败</strong></h3>
+<p data-start="1034" data-end="1094">在客户端发起请求前，通常要通过DNS解析服务器地址。一旦网络波动严重，或者DNS服务不可用，就会出现“发送失败”的报错。</p>
+<p data-start="1096" data-end="1106">常见的网络问题包括：</p>
+<ul data-start="1108" data-end="1158">
+<li data-start="1108" data-end="1128">
+<p data-start="1110" data-end="1128">公共DNS解析缓慢（如ISP劫持）；</p>
+</li>
+<li data-start="1129" data-end="1141">
+<p data-start="1131" data-end="1141">客户端网络频繁掉线；</p>
+</li>
+<li data-start="1142" data-end="1158">
+<p data-start="1144" data-end="1158">中间网络节点过载，导致丢包。</p>
+</li>
+</ul>
+<h3 data-start="1160" data-end="1182">3. <strong data-start="1167" data-end="1182">V2Ray配置文件错误</strong></h3>
+<p data-start="1184" data-end="1213">不管是客户端还是服务端，一丁点配置出错都能引起灾难。比如：</p>
+<ul data-start="1215" data-end="1298">
+<li data-start="1215" data-end="1226">
+<p data-start="1217" data-end="1226">UUID填写错误；</p>
+</li>
+<li data-start="1227" data-end="1237">
+<p data-start="1229" data-end="1237">端口写错或冲突；</p>
+</li>
+<li data-start="1238" data-end="1271">
+<p data-start="1240" data-end="1271">协议类型不一致（客户端是VMess，服务端却是Trojan）；</p>
+</li>
+<li data-start="1272" data-end="1284">
+<p data-start="1274" data-end="1284">加密方式配置不匹配；</p>
+</li>
+<li data-start="1285" data-end="1298">
+<p data-start="1287" data-end="1298">TLS证书过期或无效。</p>
+</li>
+</ul>
+<h3 data-start="1300" data-end="1323">4. <strong data-start="1307" data-end="1323">安全软件或系统防火墙阻止</strong></h3>
+<p data-start="1325" data-end="1355">Windows或macOS的安全防护机制可能会干预代理行为：</p>
+<ul data-start="1357" data-end="1436">
+<li data-start="1357" data-end="1381">
+<p data-start="1359" data-end="1381">某些杀毒软件会误判V2Ray通信为恶意活动；</p>
+</li>
+<li data-start="1382" data-end="1408">
+<p data-start="1384" data-end="1408">系统防火墙可能默认关闭了外部端口出站/入站通信；</p>
+</li>
+<li data-start="1409" data-end="1436">
+<p data-start="1411" data-end="1436">公司或校园网络可能在出口处封锁了代理通信特征端口。</p>
+</li>
+</ul>
+<h3 data-start="1438" data-end="1463">5. <strong data-start="1445" data-end="1463">服务器端资源被占满或遭受攻击</strong></h3>
+<ul data-start="1465" data-end="1544">
+<li data-start="1465" data-end="1508">
+<p data-start="1467" data-end="1508">如果你的服务器每天连接用户过多，导致TCP连接耗尽，就会出现连接被重置或无法维持；</p>
+</li>
+<li data-start="1509" data-end="1544">
+<p data-start="1511" data-end="1544">若服务器IP遭受DDOS攻击，也会让连接稳定性极差，出现频繁掉线。</p>
+</li>
+</ul>
+<hr data-start="1546" data-end="1549">
+<h2 data-start="1551" data-end="1575">四、实战解决方案：从客户端到服务端全面排查</h2>
+<h3 data-start="1577" data-end="1597">Step 1：检查服务器是否在线</h3>
+<ul data-start="1599" data-end="1771">
+<li data-start="1599" data-end="1631">
+<p data-start="1601" data-end="1631">使用 <code data-start="1604" data-end="1625">ping your_server_ip</code> 测试延迟；</p>
+</li>
+<li data-start="1632" data-end="1675">
+<p data-start="1634" data-end="1675">使用 <code data-start="1637" data-end="1665">telnet your_server_ip port</code> 查看端口是否开放；</p>
+</li>
+<li data-start="1676" data-end="1771">
+<p data-start="1678" data-end="1771">登录服务器，运行 <code data-start="1687" data-end="1711">systemctl status v2ray</code> 或查看日志 <code data-start="1718" data-end="1745">/var/log/v2ray/access.log</code> 和 <code data-start="1748" data-end="1759">error.log</code>，确认服务是否正常启动。</p>
+</li>
+</ul>
+<h3 data-start="1773" data-end="1792">Step 2：确认本地网络环境</h3>
+<ul data-start="1794" data-end="1949">
+<li data-start="1794" data-end="1810">
+<p data-start="1796" data-end="1810">重启你的WiFi或数据连接；</p>
+</li>
+<li data-start="1811" data-end="1863">
+<p data-start="1813" data-end="1863">替换DNS为Google DNS（8.8.8.8）、Cloudflare DNS（1.1.1.1）；</p>
+</li>
+<li data-start="1864" data-end="1909">
+<p data-start="1866" data-end="1909">运行 <code data-start="1869" data-end="1893">tracert your_server_ip</code>，看是否在某个节点处网络被卡住；</p>
+</li>
+<li data-start="1910" data-end="1949">
+<p data-start="1912" data-end="1949">尝试使用代理工具之外的ping/HTTP请求工具，看是否网络本身就有问题。</p>
+</li>
+</ul>
+<h3 data-start="1951" data-end="1973">Step 3：校对客户端与服务端配置</h3>
+<ul data-start="1975" data-end="2156">
+<li data-start="1975" data-end="2018">
+<p data-start="1977" data-end="2018"><strong data-start="1977" data-end="1988">UUID一致性</strong>：客户端和服务端的UUID必须一致，不能带有多余空格或换行；</p>
+</li>
+<li data-start="2019" data-end="2055">
+<p data-start="2021" data-end="2055"><strong data-start="2021" data-end="2030">端口号正确</strong>：确保客户端访问的端口在服务端已开放，且未被占用；</p>
+</li>
+<li data-start="2056" data-end="2097">
+<p data-start="2058" data-end="2097"><strong data-start="2058" data-end="2066">协议匹配</strong>：VMess/VMessAEAD/gRPC 等协议要一一对应；</p>
+</li>
+<li data-start="2098" data-end="2156">
+<p data-start="2100" data-end="2156"><strong data-start="2100" data-end="2110">TLS一致性</strong>：是否启用了TLS？客户端要启用同样的TLS设置，并拥有正确的<code data-start="2141" data-end="2153">serverName</code>字段。</p>
+</li>
+</ul>
+<h3 data-start="2158" data-end="2179">Step 4：排查防火墙与杀毒软件</h3>
+<ul data-start="2181" data-end="2302">
+<li data-start="2181" data-end="2211">
+<p data-start="2183" data-end="2211">Windows用户请确认已将V2Ray加入防火墙白名单；</p>
+</li>
+<li data-start="2212" data-end="2235">
+<p data-start="2214" data-end="2235">检查是否被诸如火绒、360等安全软件拦截；</p>
+</li>
+<li data-start="2236" data-end="2302">
+<p data-start="2238" data-end="2302">服务端执行 <code data-start="2244" data-end="2256">ufw status</code>（Ubuntu）或 <code data-start="2266" data-end="2284">firewalld status</code>（CentOS）检查防火墙开放状态。</p>
+</li>
+</ul>
+<h3 data-start="2304" data-end="2321">Step 5：分析资源瓶颈</h3>
+<p data-start="2323" data-end="2332">登录服务器后使用：</p>
+<pre class="overflow-visible!" data-start="2334" data-end="2378"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">bash</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>top
+netstat -an | grep tcp
+</span><span><span class="hljs-built_in">df</span></span><span> -h
+</span></span></code></div></div></pre>
+<p data-start="2380" data-end="2413">查看系统资源，尤其是TCP连接数是否过多。如果是高并发用户，建议：</p>
+<ul data-start="2415" data-end="2480">
+<li data-start="2415" data-end="2438">
+<p data-start="2417" data-end="2438">使用Nginx进行WebSocket反代；</p>
+</li>
+<li data-start="2439" data-end="2465">
+<p data-start="2441" data-end="2465">增加服务器连接数上限（如调整<code data-start="2455" data-end="2463">ulimit</code>）；</p>
+</li>
+<li data-start="2466" data-end="2480">
+<p data-start="2468" data-end="2480">选购性能更好的云服务器。</p>
+</li>
+</ul>
+<hr data-start="2482" data-end="2485">
+<h2 data-start="2487" data-end="2506">五、配置优化建议：防患未然是关键</h2>
+<p data-start="2508" data-end="2536">要彻底杜绝类似错误频发，优化配置是一项长期但必要的工作：</p>
+<h3 data-start="2538" data-end="2556">✅ 使用官方推荐配置模板</h3>
+<p data-start="2557" data-end="2624">从 <a data-start="2559" data-end="2599" rel="noopener" target="_new" class="" href="https://github.com/v2fly">V2Fly GitHub</a> 获取最新配置模板，避免因语法差异引发兼容性问题。</p>
+<h3 data-start="2626" data-end="2640">✅ 调整超时参数</h3>
+<p data-start="2641" data-end="2708">在<code data-start="2642" data-end="2659">inboundSettings</code>和<code data-start="2660" data-end="2678">outboundSettings</code>中加入合理的<code data-start="2684" data-end="2693">timeout</code>，防止连接因等待太久而被中断。</p>
+<h3 data-start="2710" data-end="2725">✅ 合理使用TLS</h3>
+<p data-start="2726" data-end="2771">为提高隐蔽性和安全性，可以开启TLS。但注意证书必须合法，且服务端绑定的域名需真实可访问。</p>
+<h3 data-start="2773" data-end="2789">✅ 配置多个备用节点</h3>
+<p data-start="2790" data-end="2833">通过<code data-start="2792" data-end="2801">routing</code>规则配合多个outbound，设置主节点失败时自动切换备用节点。</p>
+<h3 data-start="2835" data-end="2856">✅ 日志级别设为<code data-start="2847" data-end="2854">debug</code></h3>
+<p data-start="2857" data-end="2891">临时调试时可启用<code data-start="2865" data-end="2872">debug</code>级别，详细日志信息可迅速定位错误根源。</p>
+<hr data-start="2893" data-end="2896">
+<h2 data-start="2898" data-end="2910">六、FAQ精选问答</h2>
+<p data-start="2912" data-end="2998"><strong data-start="2912" data-end="2944">Q1：我使用的是gRPC + TLS，连接失败该怎么查？</strong><br data-start="2944" data-end="2947">
+检查TLS证书是否过期，确保客户端填写的域名和证书一致，并检查服务器gRPC路径设置是否与客户端一致。</p>
+<p data-start="3000" data-end="3076"><strong data-start="3000" data-end="3022">Q2：UUID泄露会导致连接失败吗？</strong><br data-start="3022" data-end="3025">
+有可能。某些恶意代理会监听UUID流量，进行中间人攻击。建议定期更换UUID，并开启TLS提升安全性。</p>
+<p data-start="3078" data-end="3152"><strong data-start="3078" data-end="3102">Q3：可以在V2Ray上使用负载均衡吗？</strong><br data-start="3102" data-end="3105">
+可以。通过设置多个outbound并配合routing规则，V2Ray支持简单的负载均衡机制。</p>
+<p data-start="3154" data-end="3236"><strong data-start="3154" data-end="3174">Q4：服务器频繁被封IP怎么办？</strong><br data-start="3174" data-end="3177">
+使用CDN中转（如Cloudflare Workers）、混淆协议、频繁更换IP、购买抗封线路等策略可以减缓被封频率。</p>
+<hr data-start="3238" data-end="3241">
+<h2 data-start="3243" data-end="3260">七、总结：配置精细，稳定自来</h2>
+<p data-start="3262" data-end="3365">“基础连接已经关闭发送时发生错误”虽常见，却并不复杂。它背后的原因往往是多方面的，但只要我们从网络环境、配置正确性、系统资源、防火墙策略等角度有序排查，配合适当的配置优化策略，绝大多数情况都能得到迅速解决。</p>
+<p data-start="3367" data-end="3440">掌握V2Ray并不止于搭建，而在于<strong data-start="3384" data-end="3395">理解其行为逻辑</strong>，让工具为我们服务，而非沦为困扰的源头。每一次连接成功，都是你对自由互联网的一次小小胜利。</p>
+<hr data-start="3442" data-end="3445">
+<h2 data-start="3447" data-end="3454">精彩点评</h2>
+<p data-start="3456" data-end="3623" data-is-last-node="" data-is-only-node="">本篇文章从用户视角出发，以极具实操性的语言，将V2Ray中最让人头疼的连接问题做了全面解构。逻辑严密，结构清晰，从错误成因到解决步骤层层递进，不仅给出排查流程，更提供了配置优化和实际建议，避免读者陷入反复调试的死循环。其语言既技术化又不失温度，真正做到了“工具与人协作”的写作精神。这不只是一个技术指南，更是一种网络自由实践的指南针。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-117948.htm">全面解析V2Ray免电信通混淆：原理、配置与实战指南</a></p>
+                                        <p>下一个：<a href="/news/article-118566.htm">冲浪板魅力全解：开启水上自由与冒险的新篇章</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-103116.htm" title="超越V2Ray：下一代隐私保护工具全景评测与深度指南">超越V2Ray：下一代隐私保护工具全景评测与深度指南</a></li>
+                        <li class="py-2"><a href="/news/article-104688.htm" title="解决Shadowrocket手机闪退问题的终极指南：让你的翻墙体验无忧">解决Shadowrocket手机闪退问题的终极指南：让你的翻墙体验无忧</a></li>
+                        <li class="py-2"><a href="/news/article-117631.htm" title="SSR详解：打开科学上网新世界的隐形通道">SSR详解：打开科学上网新世界的隐形通道</a></li>
+                        <li class="py-2"><a href="/news/article-108841.htm" title="Quantumult国内ID下载与使用全攻略：详尽解析与配置教程">Quantumult国内ID下载与使用全攻略：详尽解析与配置教程</a></li>
+                        <li class="py-2"><a href="/news/article-114222.htm" title="解决V2Ray出错问题的全面指南：快速排查与解决方案">解决V2Ray出错问题的全面指南：快速排查与解决方案</a></li>
+                        <li class="py-2"><a href="/news/article-118258.htm" title="破解V2Ray“基础连接已关闭”难题：实战排查与配置优化全指南">破解V2Ray“基础连接已关闭”难题：实战排查与配置优化全指南</a></li>
+                        <li class="py-2"><a href="/news/article-110549.htm" title="深入解析：如何在手机上高效使用Clash代理工具">深入解析：如何在手机上高效使用Clash代理工具</a></li>
+                        <li class="py-2"><a href="/news/article-107285.htm" title="全面解读凤凰OS科学上网的安装与配置：突破网络限制，畅享自由互联网">全面解读凤凰OS科学上网的安装与配置：突破网络限制，畅享自由互联网</a></li>
+                        <li class="py-2"><a href="/news/article-112707.htm" title="使用树莓派搭建科学上网工具的全攻略">使用树莓派搭建科学上网工具的全攻略</a></li>
+                        <li class="py-2"><a href="/news/article-112363.htm" title="2018年科学上网全攻略：工具、配置与技巧全解析">2018年科学上网全攻略：工具、配置与技巧全解析</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">20</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== END ABOUT======  -->
+        <!-- ====== START FOOTER ======  -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- START FOOTER BOTTOM -->
+                <div class="offset-md-3 col-md-6 offset-md-3">
+                    <!-- START RIGHTS -->
+                    <div class="copyright">
+                                            <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                        <p>Free V2ray Nodes订阅中文网 版权所有</p>
+                        <p>Powered by WordPress</p>
+                    </div>
+                    <!-- END RIGHTS -->
+                </div>
+                <!-- END FOOTER BOTTOM -->
+            </div>
+        </div>
+    </section>
+    <!-- ====== END FOOTER ======  -->
+    <!-- ====== JS ======  -->
+    <!--jquery-3.3.1 js-->
+    <script src="/assets/website/js/frontend/windowsnekoray/jquery-3.3.1.min.js"></script>
+    <!-- popper js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/bootstrap.min.js"></script>
+    <!-- scrollIt js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/scrollIt.min.js"></script>
+    <!-- countTo js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/jquery.countTo.js"></script>
+    <!-- filter js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/jquery.filterizr.min.js"></script>
+    <!-- waypoints js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/waypoints.min.js"></script>
+    <!-- owl carousel js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/owl.carousel.min.js"></script>
+    <!-- validator js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/validator.js"></script>
+    <!-- coustom js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/main.js"></script>
+    <!-- lightbox js -->
+    <script src="/assets/website/js/frontend/windowsnekoray/lightbox.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
