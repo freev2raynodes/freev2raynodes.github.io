@@ -1,4 +1,4 @@
-# Free V2ray Nodes - 2月9日18.6M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点订阅机场  更新时间 2026-02-09 11:04:58
+# Free V2ray Nodes - 2月16日21.5M/S|免费Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点订阅机场  更新时间 2026-02-16 05:45:18
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freev2raynodes.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://freev2raynodes.github.io/uploads/2026/02/0-20260209.yaml
-- https://freev2raynodes.github.io/uploads/2026/02/1-20260209.yaml
-- https://freev2raynodes.github.io/uploads/2026/02/2-20260209.yaml
-- https://freev2raynodes.github.io/uploads/2026/02/3-20260209.yaml
-- https://freev2raynodes.github.io/uploads/2026/02/4-20260209.yaml
+- https://freev2raynodes.github.io/uploads/2026/02/0-20260216.yaml
+- https://freev2raynodes.github.io/uploads/2026/02/1-20260216.yaml
+- https://freev2raynodes.github.io/uploads/2026/02/2-20260216.yaml
+- https://freev2raynodes.github.io/uploads/2026/02/3-20260216.yaml
+- https://freev2raynodes.github.io/uploads/2026/02/4-20260216.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://freev2raynodes.github.io/uploads/2026/02/0-20260209.txt
-- https://freev2raynodes.github.io/uploads/2026/02/1-20260209.txt
-- https://freev2raynodes.github.io/uploads/2026/02/2-20260209.txt
-- https://freev2raynodes.github.io/uploads/2026/02/3-20260209.txt
-- https://freev2raynodes.github.io/uploads/2026/02/4-20260209.txt
+- https://freev2raynodes.github.io/uploads/2026/02/0-20260216.txt
+- https://freev2raynodes.github.io/uploads/2026/02/1-20260216.txt
+- https://freev2raynodes.github.io/uploads/2026/02/2-20260216.txt
+- https://freev2raynodes.github.io/uploads/2026/02/3-20260216.txt
+- https://freev2raynodes.github.io/uploads/2026/02/4-20260216.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://freev2raynodes.github.io/uploads/2026/02/20260209.json
+- https://freev2raynodes.github.io/uploads/2026/02/20260216.json
 
 ## 更多Clash节点订阅 ：
 
