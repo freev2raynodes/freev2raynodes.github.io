@@ -312,12 +312,18 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf /usr/lo
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-10-18-free-clash.htm">Free V2ray Nodes - 10月18日18.5M/S|免费Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点/V2ray节点订阅机场</a></p>
+        <p>下一个：<a href="/free-nodes/2026-10-20-free-shadowrocket-node.htm">Free V2ray Nodes - 10月20日21.5M/S|免费Clash节点/Singbox节点/Trojan节点/V2ray节点/Shadowrocket节点/SSR节点订阅机场</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
+    <div class="panel-heading"><h5>Nekobox 如何在 Android 上导入配置？</h5></div>
     <div class="panel-body">
-        支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
+        打开 Nekobox，点击“导入配置”按钮，选择订阅链接或本地 JSON 文件。程序会解析后自动生成节点列表，用户可一键连接或测速筛选最优节点。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
+    <div class="panel-body">
+        Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>如何安全地共享订阅链接而不泄露个人信息？</h5></div>
@@ -330,6 +336,21 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf /usr/lo
         TLS+WebSocket 可伪装 HTTPS 流量，增强抗封锁能力，同时降低被封检测风险。结合策略组和节点延迟检测，可保证访问速度和连接稳定性，适合视频和游戏场景。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的 Rule Provider 自动更新规则如何操作？</h5></div>
+    <div class="panel-body">
+        Rule Provider 可以通过远程 URL 自动下载规则和节点，定期更新无需手动操作。结合策略组使用，可保持节点和分流规则最新，提高访问速度和网络可用性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的策略组支持哪些节点选择策略？</h5></div>
+    <div class="panel-body">
+        支持按延迟选择、随机选择、轮询或手动选择节点。结合规则匹配，用户可实现不同网站或应用使用不同节点，提高访问速度和网络稳定性，同时降低管理复杂度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 多路复用对即时通讯的优势是什么？</h5></div>
+    <div class="panel-body">
+        多路复用可让多个短连接共享同一通道，减少握手次数和加密开销，提高吞吐量和连接稳定性。适合即时通讯应用，保证消息快速传输和稳定接收。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan-go 与原版 Trojan 有什么不同？</h5></div>
     <div class="panel-body">
         Trojan-go 在原版 Trojan 基础上扩展了多协议支持、WebSocket、gRPC、mux 多路复用等特性，同时优化性能并支持更丰富的客户端。相比原版，它更灵活，适合高级用户或多平台部署需求。<hr />    </div>
@@ -340,29 +361,9 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf /usr/lo
         Sing-box 支持域名、IP、端口、协议类型、用户标签等多种分流规则。结合策略组，可实现精细化流量管理，满足视频加速、广告屏蔽和游戏优化等多样化需求。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
-    <div class="panel-body">
-        Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 启动后 CPU 占用高，有哪些优化建议？</h5></div>
     <div class="panel-body">
-        检查是否启用了大量日志或复杂脚本，关闭不必要的规则提供者与日志调试；在多核服务器上启用并发或调整线程数；更新到最新版本以获得性能优化，并监控是否有异常连接导致处理压力。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 多路复用对即时通讯的优势是什么？</h5></div>
-    <div class="panel-body">
-        多路复用可让多个短连接共享同一通道，减少握手次数和加密开销，提高吞吐量和连接稳定性。适合即时通讯应用，保证消息快速传输和稳定接收。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的 Rule Provider 自动更新规则如何操作？</h5></div>
-    <div class="panel-body">
-        Rule Provider 可以通过远程 URL 自动下载规则和节点，定期更新无需手动操作。结合策略组使用，可保持节点和分流规则最新，提高访问速度和网络可用性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 如何在 Android 上导入配置？</h5></div>
-    <div class="panel-body">
-        打开 Nekobox，点击“导入配置”按钮，选择订阅链接或本地 JSON 文件。程序会解析后自动生成节点列表，用户可一键连接或测速筛选最优节点。    </div>
+        检查是否启用了大量日志或复杂脚本，关闭不必要的规则提供者与日志调试；在多核服务器上启用并发或调整线程数；更新到最新版本以获得性能优化，并监控是否有异常连接导致处理压力。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -392,11 +393,11 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf /usr/lo
     <div class="panel-body">
         <div class="row">
             <div class="text-center">
-                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
+                <a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
                     <img src="/assets/website/img/G/xingchen.webp" class="avatar" alt="星辰机场">
                 </a>
                 <dl>
-                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
                     <dd>
                         <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p>                    </dd>
                 </dl>
@@ -410,16 +411,16 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf /usr/lo
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-9-24-clash-node.htm" title="Free V2ray Nodes - 9月24日18.2M/S|免费V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点订阅机场">Free V2ray Nodes - 9月24日18.2M/S|免费V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/Trojan节点/SSR节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-25.htm" title="Free V2ray Nodes - 9月25日22.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点订阅机场">Free V2ray Nodes - 9月25日22.8M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-29.htm" title="Free V2ray Nodes - 9月29日19.6M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点订阅机场">Free V2ray Nodes - 9月29日19.6M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-10-3.htm" title="Free V2ray Nodes - 10月3日20.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Trojan节点/Singbox节点订阅机场">Free V2ray Nodes - 10月3日20.8M/S|免费Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Trojan节点/Singbox节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-10-21.htm" title="Free V2ray Nodes - 10月21日22.3M/S|免费Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点订阅机场">Free V2ray Nodes - 10月21日22.3M/S|免费Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点订阅机场</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-4-node-share.htm" title="Free V2ray Nodes - 9月4日21.5M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Trojan节点订阅机场">Free V2ray Nodes - 9月4日21.5M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点/Trojan节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-14-clash-node.htm" title="Free V2ray Nodes - 10月14日19.6M/S|免费Singbox节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点订阅机场">Free V2ray Nodes - 10月14日19.6M/S|免费Singbox节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-9-11.htm" title="Free V2ray Nodes - 9月11日20.3M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点订阅机场">Free V2ray Nodes - 9月11日20.3M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-26-clash-node.htm" title="Free V2ray Nodes - 9月26日22.9M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点订阅机场">Free V2ray Nodes - 9月26日22.9M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-9-27.htm" title="Free V2ray Nodes - 9月27日18.1M/S|免费Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点订阅机场">Free V2ray Nodes - 9月27日18.1M/S|免费Clash节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Singbox节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-3.htm" title="Free V2ray Nodes - 9月3日20.2M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅机场">Free V2ray Nodes - 9月3日20.2M/S|免费Trojan节点/SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-5.htm" title="Free V2ray Nodes - 9月5日18.7M/S|免费Clash节点/Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点订阅机场">Free V2ray Nodes - 9月5日18.7M/S|免费Clash节点/Trojan节点/Singbox节点/V2ray节点/Shadowrocket节点/SSR节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-node-subscribe.htm" title="Free V2ray Nodes - 9月2日21.6M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点订阅机场">Free V2ray Nodes - 9月2日21.6M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点/Clash节点订阅机场</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-22-node-share.htm" title="Free V2ray Nodes - 9月22日18.1M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点订阅机场">Free V2ray Nodes - 9月22日18.1M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-18-clash-node-daily-updates.htm" title="Free V2ray Nodes - 9月18日21.9M/S|免费SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点订阅机场">Free V2ray Nodes - 9月18日21.9M/S|免费SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-17.htm" title="Free V2ray Nodes - 10月17日22.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点订阅机场">Free V2ray Nodes - 10月17日22.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-10-25.htm" title="Free V2ray Nodes - 10月25日22.5M/S|免费Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点订阅机场">Free V2ray Nodes - 10月25日22.5M/S|免费Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-17.htm" title="Free V2ray Nodes - 9月17日21.9M/S|免费Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅机场">Free V2ray Nodes - 9月17日21.9M/S|免费Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅机场</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -431,7 +432,7 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf /usr/lo
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
@@ -465,7 +466,7 @@ sudo </span><span><span class="hljs-built_in">rm</span></span><span> -rf /usr/lo
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
                                             <p>Free V2ray Nodes订阅中文网 版权所有</p>
                         <p>Powered by WordPress</p>
                     </div>
