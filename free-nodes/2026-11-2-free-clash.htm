@@ -269,6 +269,7 @@ OpenVPN、WireGuard等客户端，适合多场景使用，配置灵活。</p>
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/free-v2ray-subscribe-2026-11-1.htm">Free V2ray Nodes - 11月1日21.6M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点订阅机场</a></p>
+        <p>下一个：<a href="/free-nodes/free-ssr-node-2026-11-3.htm">Free V2ray Nodes - 11月3日18.7M/S|免费Trojan节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点订阅机场</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
@@ -277,34 +278,9 @@ OpenVPN、WireGuard等客户端，适合多场景使用，配置灵活。</p>
         Hysteria2 基于 QUIC 协议，采用 BBR 拥塞控制算法。相比传统 TCP 机制，BBR 能更好地利用带宽资源，提高高延迟网络下的吞吐率和响应速度。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的延迟测试准确吗？</h5></div>
-    <div class="panel-body">
-        Matsuri 的延迟测试使用 ICMP 与 TCP 双重检测方式，可较准确反映节点实际响应时间。不过受网络波动影响，建议多次测试并结合速度测试结果综合判断。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 节点分组如何自动切换？</h5></div>
-    <div class="panel-body">
-        用户可按延迟、地区或用途将节点分组，并启用策略组。系统会根据节点健康状况和延迟自动切换到最佳节点，保证网页浏览、视频播放和游戏连接稳定顺畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 的多路复用功能有哪些优势？</h5></div>
-    <div class="panel-body">
-        多路复用允许多个请求共享同一 QUIC 连接，减少握手次数和延迟。高并发情况下可以提升吞吐量和稳定性，特别适合短连接频繁请求的应用，如游戏或即时通讯。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 如何进行远程控制管理？</h5></div>
-    <div class="panel-body">
-        可在配置中启用 external-controller 并绑定管理端口，使用 WebUI 或 Mihomo Dashboard 登录。可远程查看节点状态、切换代理、编辑规则，非常适合在服务器上集中管理多个客户端。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 的节点测速功能有何局限？</h5></div>
     <div class="panel-body">
         Potatso Lite 节点测速只能显示延迟，无法测出带宽或实际下载速度。此外，测速结果受网络波动影响较大，建议结合实际使用体验来判断节点性能。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 与 VMess 的主要区别是什么？</h5></div>
-    <div class="panel-body">
-        VLESS 是 VMess 的轻量化替代协议，移除了内置加密逻辑，更依赖 TLS 层进行安全保护。这种设计降低了服务器压力，提升了传输效率，并增强了可扩展性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 节点订阅自动更新如何实现？</h5></div>
@@ -312,14 +288,39 @@ OpenVPN、WireGuard等客户端，适合多场景使用，配置灵活。</p>
         用户添加订阅 URL 后，Nekoray 会定期下载最新节点列表并替换旧节点。保持节点列表最新可减少手动维护，保证节点可用性和网络连接稳定性，提升使用体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是否支持手动节点管理？</h5></div>
+    <div class="panel-body">
+        支持。用户可手动输入节点信息或扫描二维码导入节点，并可进行修改或删除。虽然不支持自动订阅更新，但足以满足轻量用户对节点管理和流量分流的需求。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 如何进行远程控制管理？</h5></div>
+    <div class="panel-body">
+        可在配置中启用 external-controller 并绑定管理端口，使用 WebUI 或 Mihomo Dashboard 登录。可远程查看节点状态、切换代理、编辑规则，非常适合在服务器上集中管理多个客户端。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 节点分组如何自动切换？</h5></div>
+    <div class="panel-body">
+        用户可按延迟、地区或用途将节点分组，并启用策略组。系统会根据节点健康状况和延迟自动切换到最佳节点，保证网页浏览、视频播放和游戏连接稳定顺畅。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 协议和混淆选择如何影响稳定性？</h5></div>
     <div class="panel-body">
         根据网络封锁情况选择合适协议和混淆方式，如 tls1.2_ticket_auth 模拟 HTTPS 流量。合理组合可提升抗封锁能力和连接稳定性，确保节点长期可用，优化网络访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是否支持手动节点管理？</h5></div>
+    <div class="panel-heading"><h5>Hysteria2 的多路复用功能有哪些优势？</h5></div>
     <div class="panel-body">
-        支持。用户可手动输入节点信息或扫描二维码导入节点，并可进行修改或删除。虽然不支持自动订阅更新，但足以满足轻量用户对节点管理和流量分流的需求。    </div>
+        多路复用允许多个请求共享同一 QUIC 连接，减少握手次数和延迟。高并发情况下可以提升吞吐量和稳定性，特别适合短连接频繁请求的应用，如游戏或即时通讯。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 的延迟测试准确吗？</h5></div>
+    <div class="panel-body">
+        Matsuri 的延迟测试使用 ICMP 与 TCP 双重检测方式，可较准确反映节点实际响应时间。不过受网络波动影响，建议多次测试并结合速度测试结果综合判断。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS 与 VMess 的主要区别是什么？</h5></div>
+    <div class="panel-body">
+        VLESS 是 VMess 的轻量化替代协议，移除了内置加密逻辑，更依赖 TLS 层进行安全保护。这种设计降低了服务器压力，提升了传输效率，并增强了可扩展性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -367,16 +368,16 @@ OpenVPN、WireGuard等客户端，适合多场景使用，配置灵活。</p>
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-10-6-free-clash.htm" title="Free V2ray Nodes - 10月6日22.3M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/Singbox节点/V2ray节点订阅机场">Free V2ray Nodes - 10月6日22.3M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/Singbox节点/V2ray节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-9-15.htm" title="Free V2ray Nodes - 9月15日20.9M/S|免费Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点订阅机场">Free V2ray Nodes - 9月15日20.9M/S|免费Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-9-11.htm" title="Free V2ray Nodes - 9月11日20.3M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点订阅机场">Free V2ray Nodes - 9月11日20.3M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/SSR节点/Trojan节点/Clash节点订阅机场</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-31.htm" title="Free V2ray Nodes - 10月31日22.4M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅机场">Free V2ray Nodes - 10月31日22.4M/S|免费Trojan节点/Singbox节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-14-clash-node.htm" title="Free V2ray Nodes - 9月14日18.5M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点订阅机场">Free V2ray Nodes - 9月14日18.5M/S|免费Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-18-clash-node-daily-updates.htm" title="Free V2ray Nodes - 9月18日21.9M/S|免费SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点订阅机场">Free V2ray Nodes - 9月18日21.9M/S|免费SSR节点/Trojan节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-23.htm" title="Free V2ray Nodes - 9月23日19.8M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点订阅机场">Free V2ray Nodes - 9月23日19.8M/S|免费Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/SSR节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-clash-subscribe-2026-9-7.htm" title="Free V2ray Nodes - 9月7日20.3M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点订阅机场">Free V2ray Nodes - 9月7日20.3M/S|免费Trojan节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-21.htm" title="Free V2ray Nodes - 9月21日21.9M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点订阅机场">Free V2ray Nodes - 9月21日21.9M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash节点订阅机场</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-10-node-share.htm" title="Free V2ray Nodes - 9月10日22.4M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅机场">Free V2ray Nodes - 9月10日22.4M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-10-29.htm" title="Free V2ray Nodes - 10月29日19M/S|免费Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点订阅机场">Free V2ray Nodes - 10月29日19M/S|免费Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-11-2-free-clash.htm" title="Free V2ray Nodes - 11月2日22.8M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点订阅机场">Free V2ray Nodes - 11月2日22.8M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/Singbox节点/SSR节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-11-5.htm" title="Free V2ray Nodes - 11月5日21.6M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点订阅机场">Free V2ray Nodes - 11月5日21.6M/S|免费SSR节点/Trojan节点/Clash节点/V2ray节点/Singbox节点/Shadowrocket节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-10-27.htm" title="Free V2ray Nodes - 10月27日22.8M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅机场">Free V2ray Nodes - 10月27日22.8M/S|免费Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-11-9.htm" title="Free V2ray Nodes - 11月9日20.5M/S|免费Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点订阅机场">Free V2ray Nodes - 11月9日20.5M/S|免费Clash节点/Trojan节点/Shadowrocket节点/SSR节点/V2ray节点/Singbox节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-17.htm" title="Free V2ray Nodes - 10月17日22.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点订阅机场">Free V2ray Nodes - 10月17日22.7M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Trojan节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-24-free-shadowrocket-node.htm" title="Free V2ray Nodes - 10月24日21.6M/S|免费SSR节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点订阅机场">Free V2ray Nodes - 10月24日21.6M/S|免费SSR节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-11-6-free-ssr-subscribe.htm" title="Free V2ray Nodes - 11月6日18.7M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点订阅机场">Free V2ray Nodes - 11月6日18.7M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点订阅机场</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-14-clash-node.htm" title="Free V2ray Nodes - 10月14日19.6M/S|免费Singbox节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点订阅机场">Free V2ray Nodes - 10月14日19.6M/S|免费Singbox节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点订阅机场</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -388,13 +389,10 @@ OpenVPN、WireGuard等客户端，适合多场景使用，配置灵活。</p>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                     </ul>
     </div>
